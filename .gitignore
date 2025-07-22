@@ -1,6 +1,9 @@
-# node
+# Dependências
 node_modules/
+
+# Build
 dist/
+build/
 
 # sistema
 .DS_Store
@@ -8,9 +11,17 @@ Thumbs.db
 
 # logs e lixo
 *.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
 
-# arquivos do VS Code (Se usar)
+# Configs locais
 .vscode/
-
-# arquivos do sistema
 .env
+*.local
+
+# Outros
+*.zip
+*.tar.gz
+*.tgz
+*.bak
