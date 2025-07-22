@@ -1,0 +1,16 @@
+# node
+node_modules/
+dist/
+
+# sistema
+.DS_Store
+Thumbs.db
+
+# logs e lixo
+*.log
+
+# arquivos do VS Code (Se usar)
+.vscode/
+
+# arquivos do sistema
+.env
