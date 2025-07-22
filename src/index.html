@@ -1,12 +1,26 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Launcher</title>
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
 </head>
 <body>
-    
+<div class="container">
+    <div class="login">
+    <h2>Login</h2>
+    <input type="text" placeholder="Usuário" />
+    <input type="password" placeholder="Senha" />
+    <button onclick="login()">Entrar</button>
+    </div>
+    <div class="video">
+    <video width="640" height="360" autoplay muted loop>
+        <source src="assets/amv.mp4" type="video/mp4">
+        Seu navegador não suporta vídeo.
+    </video>
+    </div>
+</div>
+
+<script src="renderer.js"></script>
 </body>
 </html>
