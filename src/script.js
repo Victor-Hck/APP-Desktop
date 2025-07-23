@@ -22,7 +22,7 @@ win.loadFile(path.join(__dirname, 'login/index.html'));
 win.removeMenu();
 
 // Abre o DevTools automaticamente
-// win.webContents.openDevTools();
+win.webContents.openDevTools();
 }
 
 app.whenReady().then(createWindow);
