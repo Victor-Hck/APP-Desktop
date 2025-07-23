@@ -16,7 +16,7 @@ function createWindow () {
     }
 });
 
-win.loadFile(path.join(__dirname, 'index.html'));
+win.loadFile(path.join(__dirname, 'login/index.html'));
 
 //Remove o menu padrão
 win.removeMenu();
