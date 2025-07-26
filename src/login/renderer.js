@@ -1,9 +1,9 @@
 function login() {
-const username = document.querySelector('input[type="text"]').value;
-const password = document.querySelector('input[type="password"]').value;
+const username = document.getElementById('usuario').value;
+const password = document.getElementById('senha').value;
 
 if (username === 'admin' && password === '123') {
-    window.location.href = 'mainpage/dashboard.html'; // Troca de página!
+    window.location.href = '../mainpage/dashboard.html'; // Troca de página!
     // alert('Login bem-sucedido!');
 } else {
     alert('Usuário ou senha inválidos.');
