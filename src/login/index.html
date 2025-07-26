@@ -10,15 +10,27 @@
 <div class="container">
     <div class="login">
     <h2>Login</h2>
-    <input type="text" id="usuario" placeholder="Usuário" />
-    <input type="password" id="senha" placeholder="Senha" />
-    <button onclick="login()">Entrar</button>
-    </div>
-    <div class="video">
-    <video width="640" height="360" autoplay muted loop>
-        <source src="assets/amv.mp4" type="video/mp4">
+    <form onsubmit="event.preventDefault(); login();">
+        <input type="text" id="usuario" placeholder="Usuário" />
+        <input type="password" id="senha" placeholder="Senha" />
+        <button type="submit">Entrar</button>
+    </form>
+</div>
+
+<div class="video-container">
+    <video id="meuVideo" autoplay muted loop>
+        <source src="assets/macumba.mp4" type="video/mp4">
         Seu navegador não suporta vídeo.
     </video>
+</div>
+
+    <div class="controles-volume">
+        <button id="muteBtn" onclick="toggleMute()">
+            <!-- SVG: volume on -->
+            <svg id="volumeIcon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" viewBox="0 0 24 24">
+                <path d="M3 10v4h4l5 5V5l-5 5H3z"/>
+            </svg>
+        </button>
     </div>
 </div>
 </body>

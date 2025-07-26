@@ -1,43 +1,110 @@
 body {
-margin: 0;
-font-family: Arial, sans-serif;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
 }
 
 .container {
-display: flex;
-height: 100vh;
+    display: flex;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+/* background-color: #9D00FF; */
+}
+
+.video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.video-container video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 .login {
-flex: 1;
-background: #222;
-color: white;
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
+    z-index: 2;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    color: white;
+    background-color: #222;
+}
+
+.login h2 {
+    margin-bottom: 20px;
+}
+
+.login form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
 }
 
 .login input {
-margin: 10px;
-padding: 8px;
-width: 200px;
+    padding: 10px;
+    width: 200px;
+    border: none;
+    border-radius: 3px;
 }
 
 .login button {
-padding: 10px 20px;
-background: #0af;
-border: none;
-color: white;
-cursor: pointer;
+    padding: 10px;
+    width: 100px;
+    border: none;
+    background-color: black;
+    color: white;
+    border-radius: 3px;
+    cursor: pointer;
 }
 
-.video {
-flex: 3;
-overflow: hidden;
+.controles-volume {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    border-radius: 8px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    z-index: 3;
+    transition: background-color 0.3s ease;
 }
 
-video {width: 100%;
-height: 100%;
-object-fit: cover;
+.controles-volume button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.2s ease;
+}
+
+.controles-volume button:hover {
+    opacity: 1;
+}
+
+.controles-volume input[type="range"] {
+    height: 4px;
+    accent-color: white;
+    opacity: 0.7;
+    transition: opacity 0.2s ease;
+}
+
+.controles-volume input[type="range"]:hover {
+    opacity: 1;
 }

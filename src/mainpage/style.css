@@ -1,6 +1,46 @@
-.container {
-    background-color: black;
+:root {
+--bg: #1e1e1e;
+--fg: #eaeaea;
+--stroke: #cfcfcf;
+--radius: 18px;
+--gap: 16px;
 }
-.header {
-    background-color: aqua;
+
+* {
+box-sizing: border-box;
 }
+
+html, body {
+height: 100%;
+margin: 0;
+background: var(--bg);
+color: var(--fg);
+font-family: system-ui, sans-serif;
+}
+
+.layout {
+height: 100vh;
+padding: var(--gap);
+display: grid;
+grid-template-columns: 1fr 260px;         /* conteúdo | lateral direita */
+grid-template-rows: 70px 1fr;             /* header | conteúdo */
+grid-template-areas:
+    "header header"
+    "main   right";
+gap: var(--gap);
+}
+
+.box {
+border: 2px solid var(--stroke);
+border-radius: var(--radius);
+padding: 16px;
+}
+
+header { grid-area: header; }
+main   { grid-area: main; }
+.right { grid-area: right; }
+
+main, .right {
+overflow: auto;
+}
+
